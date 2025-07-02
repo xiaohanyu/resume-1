@@ -1,0 +1,129 @@
+# yaml-language-server: $schema=./.vscode/yamlresume-schema.json
+---
+content:
+  basics:
+    name: Uladzislau Maltsau
+    headline: Senior Software Engineer
+    email: wldyslw@outlook.com
+    summary: |
+      Hi! I'm a senior software engineer with 6+ years of experience in the industry.
+      My developer experience includes a wide variety of solutions, from classic web applications
+      to complex feature-rich software. I hold a bachelor's degree in engineering, which has
+      equipped me with a solid foundation of technical knowledge and problem-solving skills.
+  location:
+    city: Warsaw
+    region: Mazowieckie
+    country: Poland
+  profiles:
+    - network: LinkedIn
+      url: https://linkedin.com/in/wldyslw
+      username: wldyslw
+    - network: GitHub
+      url: https://github.com/wldyslw
+      username: wldyslw
+  education:
+    - institution: Belarusian State University of Informatics and Radioelectronics
+      url: https://bsuir.by
+      degree: Bachelor
+      area: Computer-aided Design
+      startDate: Sep 1, 2016
+      endDate: Jul 1, 2020
+      summary: Medical electronics, computer science
+  work:
+    - name: Digital Turbine
+      url: https://digitalturbine.com
+      startDate: May 1, 2024
+      endDate: ""
+      position: Senior Software Engineer
+      summary: |
+        As a full-stack developer, I contribute to the development of a number of solutions related to ad creatives,
+        focusing on both front-end and back-end solutions. My work involves leveraging a modern tech stack,
+        including React, Nest.js, Redis, SQL/no-SQL databases, Kafka, and various Google Cloud services like Kubernetes Engine and Big Query.
+        I also ensure seamless integration and deployment in a dynamic, scalable environment using GitLab Pipelines and Jenkins.
+    - name: Andersen Lab
+      url: https://andersenlab.com
+      startDate: Aug 1, 2023
+      endDate: Apr 30, 2024
+      position: Senior Software Engineer
+      summary: |
+        Here I worked on a new application for controlling smart media devices for a large European
+        provider. My responsibilities included participating in initial app setup and bringing key
+        decisions about the architecture, implementing complex UI components and UX patterns,
+        designing the user interface, implementing device compatibility, and ensuring a seamless
+        user experience.
+    - name: Vention (formely iTechArt)
+      url: https://ventionteams.com/
+      startDate: Oct 1, 2018
+      endDate: Jul 31, 2023
+      position: Software Engineer
+      summary: |
+        At this IT consulting company I contributed to diverse projects. I developed a B2B
+        communication CMS to enhance business collaboration. I also worked on an app to help
+        new employees adjust to life in a new country. Additionally, I was involved in creating a 3D
+        web application for real property visualization. In many cases I was responsible for setting up
+        the environment and brought bright ideas to improve the project. Internally, I engaged in tech
+        presentations and mentoring, fostering personal and professional growth.
+  languages:
+    - language: English
+      fluency: Full Professional Proficiency
+    - language: Polish
+      fluency: Minimum Professional Proficiency
+    - language: Belarusian
+      fluency: Native or Bilingual Proficiency
+    - language: Russian
+      fluency: Native or Bilingual Proficiency
+    - language: Japanese
+      fluency: Elementary Proficiency
+  skills:
+    - name: Computer Languages
+      level: Expert
+      keywords:
+        - JavaScript
+        - TypeScript
+        - HTML
+        - CSS
+    - name: Front-end Technologies
+      level: Expert
+      keywords:
+        - React
+        - WebGL
+        - Three.js
+        - Micro-frontends
+    - name: Back-end Technologies
+      level: Intermediate
+      keywords:
+        - Node.js
+        - Nest.js
+        - Docker
+        - MongoDB
+        - SQL
+    - name: Cloud Technologies
+      level: Intermediate
+      keywords:
+        - Kubernetes
+        - Google Cloud
+  volunteer:
+    - organization: Telegram
+      url: https://telegram.org/
+      position: Translations Volunteer
+      startDate: Sep 1, 2018
+      endDate: ""
+      summary: Helped with translation Telegram to Belarusian
+    - organization: ideasbank.vision
+      url: https://ideasbank.vision/
+      position: Engineering Volunteer
+      startDate: Nov 1, 2021
+      endDate: Oct 1, 2023
+      summary: Platform for managing reform projects in Belarus
+
+layout:
+  margins:
+    top: 2.5cm
+    left: 1.5cm
+    right: 1.5cm
+    bottom: 2.5cm
+  page:
+    showPageNumbers: true
+  template: moderncv-classic
+  typography:
+    fontSize: 11pt

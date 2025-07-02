@@ -1,0 +1,327 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Schema for YAML Resume format used in yamlresume.dev",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "object",
+      "properties": {
+        "basics": {
+          "type": "object",
+          "description": "Basic personal information",
+          "properties": {
+            "name": { "type": "string", "description": "Full name" },
+            "headline": { "type": "string", "description": "Brief title or role" },
+            "phone": { "type": "string", "description": "Phone number" },
+            "email": { "type": "string", "format": "email", "description": "Email address" },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "Personal website or portfolio URL"
+            },
+            "summary": {
+              "type": "string",
+              "description": "Supports limited markdown: **bold**, *italic*, ordered/unordered/nested lists, and [links](https://example.com)"
+            }
+          },
+          "required": ["name"]
+        },
+        "location": {
+          "type": "object",
+          "description": "Location details",
+          "properties": {
+            "address": { "type": "string" },
+            "city": { "type": "string" },
+            "region": { "type": "string" },
+            "country": { "type": "string" },
+            "postalCode": { "type": "string" }
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "description": "Social profiles",
+          "items": {
+            "type": "object",
+            "properties": {
+              "network": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "username": { "type": "string" }
+            }
+          }
+        },
+        "education": {
+          "type": "array",
+          "description": "Educational background",
+          "items": {
+            "type": "object",
+            "properties": {
+              "institution": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "degree": {
+                "enum": [
+                  "Middle School",
+                  "High School",
+                  "Diploma",
+                  "Associate",
+                  "Bachelor",
+                  "Master",
+                  "Doctor"
+                ],
+                "description": "Valid options: Middle School, High School, Diploma, Associate, Bachelor, Master, Doctor"
+              },
+              "area": { "type": "string" },
+              "score": { "type": "string" },
+              "startDate": {
+                "type": "string",
+                "description": "Date parsable by new Date(dateStr) in JavaScript"
+              },
+              "endDate": {
+                "type": "string",
+                "description": "Leave blank to indicate Present"
+              },
+              "courses": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "summary": {
+                "type": "string",
+                "description": "Supports limited markdown"
+              }
+            }
+          }
+        },
+        "work": {
+          "type": "array",
+          "description": "Work experience",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "startDate": {
+                "type": "string",
+                "description": "Parsable date string"
+              },
+              "endDate": {
+                "type": "string",
+                "description": "Leave blank to indicate Present"
+              },
+              "position": { "type": "string" },
+              "summary": {
+                "type": "string",
+                "description": "Supports limited markdown"
+              },
+              "keywords": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "languages": {
+          "type": "array",
+          "description": "Languages and fluency",
+          "items": {
+            "type": "object",
+            "properties": {
+              "language": { "type": "string" },
+              "fluency": {
+                "enum": [
+                  "Elementary Proficiency",
+                  "Limited Working Proficiency",
+                  "Minimum Professional Proficiency",
+                  "Full Professional Proficiency",
+                  "Native or Bilingual Proficiency"
+                ],
+                "description": "Valid options: Elementary Proficiency, Limited Working Proficiency, Minimum Professional Proficiency, Full Professional Proficiency, Native or Bilingual Proficiency"
+              },
+              "keywords": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "skills": {
+          "type": "array",
+          "description": "Skills and technologies",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "level": {
+                "enum": ["Novice", "Beginner", "Intermediate", "Advanced", "Expert", "Master"],
+                "description": "Valid options: Novice, Beginner, Intermediate, Advanced, Expert, Master"
+              },
+              "keywords": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "awards": {
+          "type": "array",
+          "description": "Awards and recognitions",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "awarder": { "type": "string" },
+              "date": { "type": "string" },
+              "summary": {
+                "type": "string",
+                "description": "Supports limited markdown"
+              }
+            }
+          }
+        },
+        "certificates": {
+          "type": "array",
+          "description": "Certificates and credentials",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "issuer": { "type": "string" },
+              "date": { "type": "string" }
+            }
+          }
+        },
+        "publications": {
+          "type": "array",
+          "description": "Publications",
+          "items": {
+            "type": "object",
+            "properties": {
+              "publisher": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "name": { "type": "string" },
+              "releaseDate": { "type": "string" },
+              "summary": {
+                "type": "string",
+                "description": "Supports limited markdown"
+              }
+            }
+          }
+        },
+        "references": {
+          "type": "array",
+          "description": "References",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "phone": { "type": "string" },
+              "relationship": { "type": "string" },
+              "email": { "type": "string", "format": "email" },
+              "summary": {
+                "type": "string",
+                "description": "Supports limited markdown"
+              }
+            }
+          }
+        },
+        "projects": {
+          "type": "array",
+          "description": "Personal or professional projects",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "description": { "type": "string" },
+              "startDate": { "type": "string" },
+              "endDate": { "type": "string" },
+              "summary": {
+                "type": "string",
+                "description": "Supports limited markdown"
+              },
+              "keywords": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "interests": {
+          "type": "array",
+          "description": "Hobbies and interests",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "keywords": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "volunteer": {
+          "type": "array",
+          "description": "Volunteer experiences",
+          "items": {
+            "type": "object",
+            "properties": {
+              "organization": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "position": { "type": "string" },
+              "startDate": { "type": "string" },
+              "endDate": { "type": "string" },
+              "summary": {
+                "type": "string",
+                "description": "Supports limited markdown"
+              }
+            }
+          }
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "description": "Layout and formatting options",
+      "properties": {
+        "locale": {
+          "type": "object",
+          "properties": {
+            "language": {
+              "type": "string",
+              "description": "Use `yamlresume languages list` to get supported languages"
+            }
+          }
+        },
+        "margins": {
+          "type": "object",
+          "description": "Page margin settings",
+          "properties": {
+            "top": { "type": "string" },
+            "left": { "type": "string" },
+            "right": { "type": "string" },
+            "bottom": { "type": "string" }
+          }
+        },
+        "page": {
+          "type": "object",
+          "properties": {
+            "showPageNumbers": { "type": "boolean" }
+          }
+        },
+        "template": {
+          "type": "string",
+          "description": "Use `yamlresume templates list` to get available templates"
+        },
+        "typography": {
+          "type": "object",
+          "properties": {
+            "fontSize": {
+              "enum": ["10pt", "11pt", "12pt"],
+              "description": "LaTeX engine supports only 10pt, 11pt, or 12pt"
+            }
+          }
+        }
+      }
+    }
+  }
+}
