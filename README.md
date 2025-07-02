@@ -5,7 +5,6 @@ This repo contains my resume in [YAMLResume](https://yamlresume.dev/) format, al
 ## 🗂️ Files
 
 - `resume.yaml` — The source resume in YAML format.
-- `resume.pdf` — The final exported PDF (output of `make`).
 - `tmp/` — Temporary build directory (git-ignored).
 - `Makefile` — Automates building and cleaning resume artifacts.
 
@@ -26,7 +25,6 @@ This will:
 
 1. Copy `resume.yaml` into a temporary `tmp/` directory.
 2. Run `yamlresume build resume.yaml` using the official Docker image.
-3. Move `resume.pdf` to the project root.
 
 ### Clean build artifacts
 
@@ -34,13 +32,9 @@ This will:
 make clean
 ```
 
-This will remove the generated `resume.pdf` and the `tmp/` directory.
+This will remove the generated `tmp/` directory.
 
 ## 📦 Notes
 
-- Intermediate files (`.tex`, `.aux`, etc.) are stored in `tmp/` and ignored via `.gitignore`.
+- Final PDF and intermediate files (`.tex`, `.aux`, etc.) are stored in `tmp/` and ignored via `.gitignore`.
 - PDF is always rebuilt fresh from `resume.yaml`.
-
-## 📄 License
-
-[MIT](LICENSE) — Use freely and modify as needed.
