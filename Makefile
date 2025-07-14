@@ -16,7 +16,7 @@ $(PDF_OUT): $(RESUME_FILE) | $(TMP_DIR)
 	cp $(RESUME_FILE) $(TMP_DIR)/$(RESUME_FILE)
 
 	# Run the build inside tmp using Docker
-	docker run --rm -v $(PWD)/$(TMP_DIR):/home/yamlresume yamlresume/yamlresume build $(RESUME_FILE)
+	docker run --pull=always --rm -v $(PWD)/$(TMP_DIR):/home/yamlresume yamlresume/yamlresume:latest build $(RESUME_FILE)
 
 clean:
 	rm -rf $(TMP_DIR) $(PDF_OUT)
