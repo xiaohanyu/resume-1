@@ -35,6 +35,11 @@ content:
       startDate: May 1, 2024
       endDate: ""
       position: Senior Software Engineer
+      keywords:
+        - React
+        - Nest.js
+        - Google Cloud Platform
+        - Kubernetes
       summary: |
         As a full-stack developer, I contribute to the development of a number of solutions related to ad creatives,
         focusing on both front-end and back-end solutions. My work involves leveraging a modern tech stack,
@@ -45,6 +50,11 @@ content:
       startDate: Aug 1, 2023
       endDate: Apr 30, 2024
       position: Senior Software Engineer
+      keywords:
+        - React
+        - Redux Toolkit
+        - GRPC
+        - Micro-frontends
       summary: |
         Here I worked on a new application for controlling smart media devices for a large European
         provider. My responsibilities included participating in initial app setup and bringing key
@@ -56,6 +66,11 @@ content:
       startDate: Oct 1, 2018
       endDate: Jul 31, 2023
       position: Software Engineer
+      keywords:
+        - React
+        - Redux
+        - Three.js
+        - WebGL
       summary: |
         At this IT consulting company I contributed to diverse projects. I developed a B2B
         communication CMS to enhance business collaboration. I also worked on an app to help
@@ -86,9 +101,16 @@ content:
       level: Expert
       keywords:
         - React
+        - Redux
+        - Storybook
+        - Micro-frontends
+    - name: Visualization & media
+      level: Advanced
+      keywords:
+        - Mapbox
+        - Leaflet
         - WebGL
         - Three.js
-        - Micro-frontends
     - name: Back-end Technologies
       level: Intermediate
       keywords:
@@ -102,6 +124,15 @@ content:
       keywords:
         - Kubernetes
         - Google Cloud
+  projects:
+    - summary: |
+        Minimal, dependency-free component for mobile UX written in React
+        (TypeScript, <5 KB gzip, built with accessibility and performance in mind).
+        Open-sourced, can be found on GitHub (**[click here for the link](https://github.com/wldyslw/react-bottom-sheet)**)
+      description: React Bottom Sheet
+      name: pet-project
+      startDate: Jun 1, 2023
+      endDate: ""
   volunteer:
     - organization: Telegram
       url: https://telegram.org/
