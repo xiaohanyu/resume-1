@@ -147,14 +147,15 @@ content:
       endDate: Oct 1, 2023
       summary: Platform for managing reform projects in Belarus
 
-layout:
-  margins:
-    top: 2.5cm
-    left: 1.5cm
-    right: 1.5cm
-    bottom: 2.5cm
-  page:
-    showPageNumbers: true
-  template: moderncv-classic
-  typography:
-    fontSize: 11pt
+layouts:
+  - engine: latex
+    page:
+      showPageNumbers: true
+      margins:
+        top: 2.5cm
+        left: 1.5cm
+        right: 1.5cm
+        bottom: 2.5cm  
+    template: moderncv-classic
+    typography:
+      fontSize: 11pt
